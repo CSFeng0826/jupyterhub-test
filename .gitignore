@@ -1,0 +1,4 @@
+.env
+config_folder/jupyterhub*.*
+config_folder/jupyter*
+share
