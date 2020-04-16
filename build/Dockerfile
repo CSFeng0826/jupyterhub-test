@@ -18,6 +18,3 @@ RUN pip install oauthenticator==0.9.0
 RUN pip install nbgrader
 
 COPY ./main.min.js /opt/conda/lib/python3.6/site-packages/notebook/static/notebook/js
-
-RUN apt-get update
-RUN apt-get upgrade
