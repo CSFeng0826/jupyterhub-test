@@ -12,11 +12,12 @@ RUN apk add --no-cache curl jq && \
 FROM jupyterhub/jupyterhub:1.0.0
 
 COPY --from=1 /etc/apt/sources.list /etc/apt/sources.list
-COPY ./main.min.js /opt/conda/lib/python3.6/site-packages/notebook/static/notebook/js
 
 RUN pip install notebook==6.0.1
 RUN pip install oauthenticator==0.9.0
 RUN pip install nbgrader
+
+COPY ./main.min.js /opt/conda/lib/python3.6/site-packages/notebook/static/notebook/js
 
 RUN apt-get update
 RUN apt-get install -y vim
