@@ -20,7 +20,4 @@ RUN pip install nbgrader
 COPY ./main.min.js /opt/conda/lib/python3.6/site-packages/notebook/static/notebook/js
 
 RUN apt-get update
-RUN apt-get install -y vim
-RUN apt-get install sudo
-RUN apt-get install -y curl
-RUN apt-get install -y lsb-core
+RUN apt-get upgrade
