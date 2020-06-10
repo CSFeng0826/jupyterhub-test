@@ -18,3 +18,11 @@ RUN pip install oauthenticator==0.9.0
 RUN pip install nbgrader
 
 COPY ./main.min.js /opt/conda/lib/python3.6/site-packages/notebook/static/notebook/js
+
+RUN apt-get update && \
+    apt-get -y install sudo
+
+RUN sudo useradd csfeng0826 && \
+    sudo groupadd -g 245 jupyterhub && \
+    sudo adduser csfeng0826 sudo && \
+    sudo adduser csfeng0826 jupyterhub

@@ -13,6 +13,8 @@ services:
             - './${SHARE_FOLDER}:/home'
             - './config_folder:/srv/jupyterhub'
         env_file: .env
+        environment:
+            - TZ=Asia/Taipei
         
 
 
