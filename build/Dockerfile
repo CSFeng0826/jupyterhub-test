@@ -22,7 +22,7 @@ COPY ./main.min.js /opt/conda/lib/python3.6/site-packages/notebook/static/notebo
 RUN apt-get update && \
     apt-get -y install sudo
 
-RUN sudo useradd csfeng0826 && \
+RUN sudo useradd admin && \
     sudo groupadd -g 245 jupyterhub && \
-    sudo adduser csfeng0826 sudo && \
-    sudo adduser csfeng0826 jupyterhub
+    sudo adduser admin sudo && \
+    sudo adduser admin jupyterhub
