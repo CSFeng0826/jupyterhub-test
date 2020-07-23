@@ -12,6 +12,7 @@ services:
         volumes:
             - './${SHARE_FOLDER}:/home'
             - './config_folder:/srv/jupyterhub'
+            - './exchange:/srv/nbgrader/exchange'
         env_file: .env
         environment:
             - TZ=Asia/Taipei
