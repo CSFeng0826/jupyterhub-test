@@ -18,6 +18,7 @@ You can check <code>env.example</code> and <code>example.jupyterhub_config.py</c
 
 ## Step 3
 Build up SmartGrader. Please insure you are at root path.  
+<pre><code>sudo docker-compose build</code></pre>
 <pre><code>sudo docker-compose up -d</code></pre>  
 
 ## Step 4
