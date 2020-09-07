@@ -1,10 +1,6 @@
 import os
 import pandas as pd
 
-data = pd.read_csv("code.csv", encoding = 'utf-8')
-
-nids = list(set(data["nid"].to_list()))
-
 command = ["jupyter nbextension install --user --py nbgrader --overwrite",
            "jupyter nbextension enable --user --py nbgrader",
            "jupyter serverextension enable --user --py nbgrader",
