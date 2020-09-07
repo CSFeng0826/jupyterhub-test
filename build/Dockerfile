@@ -13,15 +13,20 @@ FROM jupyterhub/jupyterhub:1.0.0
 
 COPY --from=1 /etc/apt/sources.list /etc/apt/sources.list
 
+# install necessary package
 RUN pip install notebook==6.0.1
 RUN pip install oauthenticator==0.9.0
+
+# install custom package
 RUN pip install nbgrader
 
+# change notebook js to SmartGrader js
 COPY ./main.min.js /opt/conda/lib/python3.6/site-packages/notebook/static/notebook/js
 
 RUN apt-get update && \
     apt-get -y install sudo
 
+# add a sudo user
 RUN sudo useradd admin && \
     sudo groupadd -g 245 jupyterhub && \
     sudo adduser admin sudo && \

@@ -85,8 +85,8 @@ c.JupyterHub.admin_access = True
 # 
 # Use this to restrict which users can login. If empty, allow any user to
 # attempt login.
-c.Authenticator.whitelist = {'csfeng0826'}
-c.Authenticator.admin_users = {'csfeng0826'}
+c.Authenticator.whitelist = {'selab'}
+c.Authenticator.admin_users = {'selab'}
 
 #------------------------------------------------------------------------------
 # LocalAuthenticator configuration
